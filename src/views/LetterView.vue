@@ -4,6 +4,7 @@ import { onMounted, onBeforeUnmount, ref } from "vue";
 import birthdayImage from "@/assets/monet-img.jpg";
 import musicFile from "@/assets/music2.mp3"; // Use this for assets folder
 import { nextTick } from 'vue';
+import router from "@/router";
 
 const audio = ref();
 const isMuted = ref(false);
@@ -27,6 +28,10 @@ const pauseMusic = () => {
     if (audio.value) {
         audio.value.pause();
     }
+}
+
+const pictureView = () => {
+    router.push({ name: 'picture' });
 }
 
 const startTypingAndMusic = () => {
@@ -111,8 +116,8 @@ onBeforeUnmount(() => {
         </div>
 
         <!-- Footer Section -->
-        <div class="py-4 text-center" v-if="buttonClicked">
-            <button class="hover:bg-gray-800 bg-gray-700 py-2 px-4 text-white rounded">Hello</button>
+        <div class="py-4 text-center" v-if="buttonClicked" @click="pictureView">
+            <button class="hover:bg-gray-800 bg-gray-700 py-2 px-4 text-white rounded">See more...</button>
         </div>
     </div>
 </template>
