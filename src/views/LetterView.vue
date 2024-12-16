@@ -1,0 +1,91 @@
+<script setup>
+import Typed from "typed.js";
+import { onMounted, onBeforeUnmount, ref } from "vue";
+import birthdayImage from "@/assets/monet-img.jpg";
+
+
+const typedElement = ref(null); // Reference for the element to attach Typed.js
+let typedInstance = null; // Store the Typed.js instance
+
+onMounted(() => {
+    // Initialize Typed.js
+    typedInstance = new Typed(typedElement.value, {
+        strings: [
+            `
+      Happy birthday to my favorite human,<br>
+      You have been doing <b>amazing</b> lately, and I couldn’t be prouder of you.<br>
+      You remained strong despite the hurdles life threw your way,
+      staying a caring sister, a good daughter, and the <i>best girlfriend</i> through it all.<br>
+
+      Thank you for being strong and committing to your goal.<br>
+      And I know I say this all the time, but thanks for being there when no one is.<br>
+
+      I also want to simply thank you for being <b class="text-green-600">you</b>.<br>
+      To me, you are already <span class="text-yellow-600">perfect</span>—just as you are.<br>
+
+      I apologize for not having been at my best lately.<br>
+      For times when I let my struggles cloud my behavior.<br>
+      For moments when I’m mad or distant, I deeply apologize.<br>
+
+      But today, let’s celebrate you–your strength, your kindness, and your beauty, inside and out.<br>
+      I can’t wait to witness the <b>amazing things</b> you’ll be accomplishing in this new chapter.<br>
+      You deserve every bit of happiness and success.<br>
+
+      I love you.<br>
+      <b>Happy birthday once again.</b>
+      `
+        ],
+        typeSpeed: 0.5, // Typing speed (adjust as needed for realism)
+        showCursor: false, // Hide the blinking cursor
+        loop: false, // No looping
+        startDelay: 500, // Optional: Delay before typing starts (in milliseconds)
+    });
+});
+
+onBeforeUnmount(() => {
+    // Destroy the Typed.js instance to prevent memory leaks
+    if (typedInstance) {
+        typedInstance.destroy();
+    }
+});
+</script>
+
+<template>
+    <div class="w-full mx-auto bg-green-100">
+        <div class="flex justify-center items-center h-screen w-3/4 mx-auto gap-x-20">
+            <div class="flex-1 text-container text-justify max-w-prose">
+                <span ref="typedElement" class="mr-4 text-sm"></span>
+
+            </div>
+            <div class="flex-1 image-container">
+                <span><img :src="birthdayImage" alt="Monette" class="fixed-image rounded-3xl"></span>
+
+            </div>
+        </div>
+        <div class="text-center">
+            <button>Hello</button>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.fixed-image {
+    max-width: 60%;
+    /* Set a fixed width or use a suitable size */
+    height: 60%;
+    /* Maintain aspect ratio */
+}
+
+/* Ensure Flexbox Layout */
+.text-container,
+.image-container {
+    flex: 1;
+    /* Ensure equal space for text and image */
+    text-align: center;
+    /* Center-align content */
+}
+
+.text-justify {
+    text-align: justify;
+}
+</style>
