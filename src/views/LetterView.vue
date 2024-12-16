@@ -84,28 +84,39 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <div class="w-full mx-auto bg-green-100">
-        <div class="music-container flex justify-end">
+    <div class="w-full mx-auto bg-green-100 min-h-screen flex flex-col">
+        <!-- Music Control Section -->
+        <div class="music-container flex justify-end py-4">
             <button @click="toggleMute" class="mute-button text-3xl">
                 {{ isMuted ? "🔇" : "🔊" }}
             </button>
             <audio ref="audio" :src="musicFile" preload="auto"></audio>
         </div>
-        <div class="flex justify-center items-center h-screen w-3/4 mx-auto gap-x-20">
-            <div class="flex-1 text-container text-justify max-w-prose">
-                <button v-if="!buttonClicked" @click="startTypingAndMusic" class="hover:bg-blue-900 bg-blue-700 py-2 px-3 rounded-md text-white">✉️ Open me</button>
 
-                <span ref="typedElement" class="mr-4 text-sm" v-if="buttonClicked"></span>
+        <!-- Main Content Section -->
+        <div class="flex-1 flex justify-center items-center w-3/4 mx-auto gap-x-20">
+            <button
+                v-if="!buttonClicked"
+                @click="startTypingAndMusic"
+                class="hover:bg-blue-900 bg-blue-700 py-2 px-3 rounded-md text-white"
+            >
+                ✉️ Open me
+            </button>
+            <div class="flex-1 text-container text-justify max-w-prose" v-if="buttonClicked">
+                <span ref="typedElement" class="mr-4 text-sm"></span>
             </div>
-            <div class="flex-1 image-container">
+            <div class="flex-1 image-container" v-if="buttonClicked">
                 <span><img :src="birthdayImage" alt="Monette" class="fixed-image rounded-3xl"></span>
             </div>
         </div>
-        <div class="text-center">
-            <button>Hello</button>
+
+        <!-- Footer Section -->
+        <div class="py-4 text-center" v-if="buttonClicked">
+            <button class="hover:bg-gray-800 bg-gray-700 py-2 px-4 text-white rounded">Hello</button>
         </div>
     </div>
 </template>
+
 
 <style scoped>
 .fixed-image {
