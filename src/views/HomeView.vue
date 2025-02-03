@@ -34,7 +34,7 @@ const nextPage = () => {
       <div>
         <Transition>
           <button @click="nextPage" v-if="showSecond"
-            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-2xl text-sm px-3 py-2.5 me-2 mb-2 mt-5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">What
+            class="hover:scale-105 hover:shadow-xl hover:shadow-cyan-300 transition duration-200 focus:outline-none text-white bg-red-700 hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-2xl text-sm px-3 py-2.5 me-2 mb-2 mt-5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">What
             about me?</button>
         </Transition>
       </div>

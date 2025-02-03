@@ -9,6 +9,7 @@ import router from "@/router";
 const audio = ref();
 const isMuted = ref(false);
 const buttonClicked = ref(false);
+const imageLoaded = ref(false);
 
 const typedElement = ref(null); // Reference for the element to attach Typed.js
 let typedInstance = null; // Store the Typed.js instance
@@ -36,6 +37,10 @@ const pictureView = () => {
 
 const startTypingAndMusic = () => {
     buttonClicked.value = true;
+
+    setTimeout(() => {
+        imageLoaded.value = true;
+    }, 100);
 
     audio.value.play().then(() => {
         isPlaying.value = true;
@@ -103,7 +108,7 @@ onBeforeUnmount(() => {
             <button
                 v-if="!buttonClicked"
                 @click="startTypingAndMusic"
-                class="hover:bg-blue-900 bg-blue-700 py-2 px-3 rounded-md text-white"
+                class="hover:bg-blue-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-300 transition duration-200 bg-blue-700 py-2 px-3 rounded-md text-white"
             >
                 ✉️ Open me
             </button>
@@ -111,7 +116,9 @@ onBeforeUnmount(() => {
                 <span ref="typedElement" class="mr-4 text-sm"></span>
             </div>
             <div class="flex-1 image-container" v-if="buttonClicked">
-                <span><img :src="birthdayImage" alt="Monette" class="fixed-image rounded-3xl"></span>
+                <span><img :src="birthdayImage" alt="Monette" 
+                    class="shadow-xl fixed-image rounded-3xl duration-[3s] transition-opacity opacity-0 ease-in-out" 
+                    :class="{'opacity-100' : imageLoaded}"></span>
             </div>
         </div>
 
