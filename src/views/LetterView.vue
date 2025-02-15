@@ -127,14 +127,14 @@ onBeforeUnmount(() => {
                     class="hover:bg-blue-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-300 transition duration-200 bg-blue-700 py-2 px-3 rounded-md text-white">
                     ✉️ Open me
                 </button>
-                <div class="flex-1 text-container min-w-[320px]:text-center mb-8 md:text-justify max-w-prose"
+                <div class="flex-1 text-container mb-8 min-[320px]:text-center max-w-prose"
                     v-if="buttonClicked">
                     <span ref="typedElement" class="mr-4 text-sm"></span>
                 </div>
-                <div class="flex-1 image-container" v-if="buttonClicked">
-                    <span class="min-[320px]:flex min-[320px]:justify-center min-[320px]:items-center"><img :src="birthdayImage" alt="Monette"
+                <div class="flex-1 image-container mb-14" v-if="buttonClicked">
+                    <span class="min-[320px]:flex min-[320px]:justify-center min-[320px]:items-center mb-4"><img :src="birthdayImage" alt="Monette"
                             class="shadow-xl fixed-image rounded-3xl duration-[3s] transition-opacity opacity-0 ease-in-out"
-                            :class="{ 'opacity-100': imageLoaded }"></span>
+                            :class="{ 'opacity-100': showPs }"></span>
                             <p class="duration-[10s] transition-opacity opacity-0 ease-in-out" :class="{ 'opacity-100': showPs }">The cutest pic of 
                                 <span class="text-yellow-600">you</span> that I have.</p>
                 </div>
