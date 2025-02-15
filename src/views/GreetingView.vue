@@ -55,9 +55,10 @@ const next = () => {
 
 <template>
     <div class="flex flex-col justify-center items-center h-screen">
-        <p class="text-5xl">Happy Birthday, Monet!</p>
+        <p class="text-5xl min-[320px]:text-center flex flex-col gap-x-1"><span class="text-3xl">Happy Birthday,</span> Monet!</p>
         <div class="inline-flex mt-10" v-if="showThen">
-            <button class="hover:scale-105 hover:shadow-lg hover:shadow-yellow-200 transition duration-200 bg-gray-300 hover:bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded" @click="next">
+            <button class="hover:scale-105 hover:shadow-lg hover:shadow-yellow-200 transition duration-200 bg-gray-300 hover:bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded
+            " @click="next">
                 Thank you
             </button>
         </div>

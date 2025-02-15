@@ -5,6 +5,7 @@ import { onMounted, ref } from 'vue'
 
 const showFirst = ref(false);
 const showSecond = ref(false);
+const showThird = ref(false);
 
 onMounted(() => {
   setTimeout(() => {
