@@ -1,12 +1,5 @@
 <script setup>
-
-const chapters = [
-  { kicker: 'Prologue', title: 'How We Met', img: 'src/assets/monet-img.jpg' },
-  { kicker: 'Chapter I', title: 'The Build' },
-  { kicker: 'Chapter II', title: 'The Storm' },
-  { kicker: 'Chapter III', title: 'Ordinary, Yet Special' },
-  { kicker: 'Epilogue', title: 'Still Choosing You' },
-];
+import { chapters } from '../constants/chapters';
 
 </script>
 
@@ -14,9 +7,12 @@ const chapters = [
   <main>
     <div class="min-h-screen bg-[#f5f7fa] flex items-center justify-center">
       <div class="flex gap-5 overflow-y-hidden px-8">
-        <div v-for="(chapter, i) in chapters"
-        :key="i"
-        class="group relative w-64 h-[530px] bg-white overflow-hidden flex flex-col justify-end p-6 hover:scale-[1.01] hover:shadow-xl transition cursor-pointer"
+        <component
+          v-for="(chapter, i) in chapters"
+          :key="i"
+          :is="chapter.route ? 'router-link' : 'div'"
+          v-bind="chapter.route ? { to: chapter.route } : {}"
+          class="group relative w-64 h-[530px] bg-white overflow-hidden flex flex-col justify-end p-6 hover:scale-[1.01] hover:shadow-xl transition cursor-pointer"
         >
 
         <div
@@ -39,7 +35,7 @@ const chapters = [
           </h2>
         </div>
           
-        </div>
+        </component>
       </div>
     </div>
   </main>      

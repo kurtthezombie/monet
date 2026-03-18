@@ -4,6 +4,7 @@ import GreetingView from '@/views/GreetingView.vue'
 import LetterView from '@/views/LetterView.vue'
 import PictureView from '@/views/PictureView.vue'
 import ChaptersView from '@/views/ChaptersView.vue'
+import PrologueView from '@/views/PrologueView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +41,11 @@ const router = createRouter({
       path: '/chapters',
       name: 'chapters',
       component: ChaptersView
+    },
+    {
+      path: '/prologue',
+      name: 'prologue',
+      component: PrologueView
     },
   ],
 })
