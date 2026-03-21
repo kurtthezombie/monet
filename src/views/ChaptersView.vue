@@ -7,12 +7,11 @@ import { chapters } from '../constants/chapters';
   <main>
     <div class="min-h-screen bg-[#f5f7fa] flex items-center justify-center">
       <div class="flex gap-5 overflow-y-hidden px-8">
-        <component
+        <router-link
           v-for="(chapter, i) in chapters"
           :key="i"
-          :is="chapter.route ? 'router-link' : 'div'"
-          v-bind="chapter.route ? { to: chapter.route } : {}"
-          class="group relative w-64 h-[530px] bg-white overflow-hidden flex flex-col justify-end p-6 hover:scale-[1.01] hover:shadow-xl transition cursor-pointer"
+          :to="`/chapters/${chapter.slug}`"
+          class="group relative w-64 h-[530px] bg-white overflow-hidden flex flex-col justify-end p-6 hover:scale-[1.01] hover:shadow-xl transition cursor-pointer" 
         >
 
         <div
@@ -35,7 +34,7 @@ import { chapters } from '../constants/chapters';
           </h2>
         </div>
           
-        </component>
+        </router-link>
       </div>
     </div>
   </main>      

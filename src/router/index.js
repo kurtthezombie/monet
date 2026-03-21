@@ -28,8 +28,8 @@ const router = createRouter({
       component: GreetingView,
     },
     {
-      path: '/letter',
-      name: 'letter',
+      path: '/chapters/:slug',
+      name: 'chapter',
       component: LetterView,
     },
     {
@@ -41,11 +41,6 @@ const router = createRouter({
       path: '/chapters',
       name: 'chapters',
       component: ChaptersView
-    },
-    {
-      path: '/prologue',
-      name: 'prologue',
-      component: PrologueView
     },
   ],
 })
