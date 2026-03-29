@@ -13,7 +13,7 @@ const letter = computed(() => {
 
 
 <template>
-  <div class="min-h-screen px-6 py-10 bg-[#f5f7fa]">
+  <div class="min-h-screen px-6 py-10 bg-gradient-to-br from-violet-100 via-rose-50 to-pink-100">
     <LetterDetails v-if="letter" :letter="letter" />
 
     <div v-else class="text-red-500 text-center">
