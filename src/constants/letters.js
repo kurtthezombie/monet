@@ -36,7 +36,16 @@ export const letters = [
   {
     slug: 'chapter-3',
     title: 'Ordinary, Yet Special',
-    content: `This is the content of the ordinary`
+    content: `We’ve been through a few storms, some heavier than others, but none of them ever really put us down. We’ve gone on many dates too, some planned, some just happening on their own. Dinners together, trying new places, and even the familiar ones. There’s been all of that.
+
+    But when I look back on all of it, it’s not really the big or planned moments that stay with me. It’s the simpler ones that keep coming back, the ones that didn’t try to be anything more than what they were.
+
+    The way you rest your head on my chest, no distractions, just the silence and each other’s heartbeats. The way you lean on me or hold my arm when we walk. The way you hold my hand a little off, uneven, but it somehow fits anyway. The random glances that turn into quiet “huh”s. The way our steps never quite match, but we keep walking side by side. The way we share our food, letting each other taste what we have, like it’s something small but still worth sharing. And how, even when it’s time to go, we end up wanting to stay just a little longer
+
+    I think that’s when it became clear to me. That what I want isn’t anything complicated or extraordinary, just a kind of life where moments like these are enough, where nothing feels lacking even when nothing big is happening.
+
+    With you, I don’t think I’d ever get tired of it. It’s the kind of life I’d want to live and feel every day, and I’d choose it every time. Because these are the moments I once hoped for. Because I hoped for you.
+  `
   },
   {
     slug: 'epilogue',

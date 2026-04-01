@@ -5,7 +5,7 @@ import { chapters } from '../constants/chapters';
 
 <template>
   <main>
-    <div class="min-h-screen bg-[#f5f7fa] flex items-center justify-center">
+    <div class="min-h-screen bg-[#fce7f3] flex items-center justify-center">
       <div class="flex gap-5 overflow-y-hidden px-8">
         <router-link
           v-for="(chapter, i) in chapters"
@@ -15,7 +15,7 @@ import { chapters } from '../constants/chapters';
         >
 
         <div
-          class="absolute inset-0 bg-cover bg-center opacity-10
+          class="absolute inset-0 bg-cover bg-center opacity-40
            transition duration-300
            group-hover:opacity-30 group-hover:scale-105"
           :style="{ backgroundImage: `url(${chapter.img})` }"
