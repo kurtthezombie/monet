@@ -3,5 +3,5 @@ export const chapters = [
   { slug: 'chapter-1', kicker: 'Chapter I', title: 'The Build' },
   { slug: 'chapter-2', kicker: 'Chapter II', title: 'The Storm', img: 'src/assets/chapter2.jpg' },
   { slug: 'chapter-3', kicker: 'Chapter III', title: 'Ordinary, Yet Special', img: 'src/assets/ordinary.jpg' },
-  { slug: 'epilogue', kicker: 'Epilogue', title: 'Still Choosing You' },
+  { slug: 'epilogue', kicker: 'Epilogue', title: 'Still Choosing You', img: 'src/assets/epilogue.jpg' },
 ];

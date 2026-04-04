@@ -49,7 +49,14 @@ export const letters = [
   },
   {
     slug: 'epilogue',
-    title: 'Epilogue',
-    content: `This is the content of the epilogue`
+    title: 'Still Choosing You',
+    content: `I know we’re not the perfect couple in everyone’s eyes, but that doesn’t define what we have. People only see what’s on the surface. They don’t see what we’ve been through or what we’ve built together. We’ve had our share of fights, both small and big, but we never ignored them. We faced them, talked through them, and learned how to adjust for each other. And to me, that matters more than looking perfect ever could.
+
+    Throughout this relationship, I’ve learned that people go through many changes. Like a caterpillar turning into something new, we’ve had our own transformations as a couple. This love changed me in ways I didn’t expect. Even on the quiet, heavy days, being with you makes everything feel a little lighter.
+
+    Our love doesn’t have to be perfect. It doesn’t need to be something for other people to watch and judge, like a spectacle they enjoy and then forget. It’s not like the kind you see in movies. But in its own way, what we have could tell a better story. What we have is intimate, private, and most of all, special. It doesn’t need to meet anyone else’s expectations. It just needs to exist, and for me, that is enough.
+
+    I’ve seen us at our best and at our worst. There were parts that didn’t always make sense, and moments that didn’t feel right, but there were also ones that fit so naturally. Through all of it, I realized that what mattered most to me was simply being with you. Every version of us, every phase we went through, I still chose to stay. And even now, after everything, I would still choose you.
+  `
   },
 ];
