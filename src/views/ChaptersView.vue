@@ -4,7 +4,7 @@ import { chapters } from '../constants/chapters';
 
 <template>
   <main>
-    <div class="min-h-screen bg-[#fce7f3] flex items-center justify-center py-10">
+    <div class="min-h-screen bg-gradient-to-br from-rose-100 via-pink-200 to-violet-200 flex items-center justify-center py-10">
 
       <!-- Desktop: horizontal scroll row -->
       <div class="hidden sm:flex gap-5 overflow-y-hidden px-8">
@@ -15,7 +15,7 @@ import { chapters } from '../constants/chapters';
           class="group relative w-64 h-[530px] bg-white overflow-hidden flex flex-col justify-end p-6 hover:scale-[1.01] hover:shadow-xl transition cursor-pointer"
         >
           <div
-            class="absolute inset-0 bg-cover bg-center opacity-40 transition duration-300 group-hover:opacity-30 group-hover:scale-105"
+            class="absolute inset-0 bg-cover bg-center opacity-50 transition duration-300 group-hover:opacity-30 group-hover:scale-105"
             :style="{ backgroundImage: `url(${chapter.img})` }"
           >
             <div class="absolute inset-0 bg-white/10"></div>
