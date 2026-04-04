@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import GreetingView from '@/views/GreetingView.vue'
 import LetterView from '@/views/LetterView.vue'
 import PictureView from '@/views/PictureView.vue'
+import ChaptersView from '@/views/ChaptersView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,14 +27,19 @@ const router = createRouter({
       component: GreetingView,
     },
     {
-      path: '/letter',
-      name: 'letter',
+      path: '/chapters/:slug',
+      name: 'chapter',
       component: LetterView,
     },
     {
       path: '/picture',
       name: 'picture',
       component: PictureView
+    },
+    {
+      path: '/chapters',
+      name: 'chapters',
+      component: ChaptersView
     },
   ],
 })
