@@ -9,6 +9,7 @@ export const chapters = [
     slug: 'chapter-1', 
     kicker: 'Chapter I', 
     title: 'The Build',
+    img: 'src/assets/chapter1.jpg'
   },
   { 
     slug: 'chapter-2', 
