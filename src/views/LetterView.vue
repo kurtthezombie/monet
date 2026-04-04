@@ -13,7 +13,9 @@ const letter = computed(() => {
 
 
 <template>
-  <div class="min-h-screen px-6 py-10 bg-gradient-to-br from-violet-100 via-rose-50 to-pink-100">
+  <div class="min-h-screen px-6 py-10" 
+    :class="letter?.bgClass || 'bg-white'"
+    >
     <LetterDetails v-if="letter" :letter="letter" />
 
     <div v-else class="text-red-500 text-center">
